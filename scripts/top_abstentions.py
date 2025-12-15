@@ -2,7 +2,7 @@ import pandas as pd
 from janitor import clean_names
 import src
 
-src.raw_to_bronze(input_dir='data\\raw', output_dir='data\\bronze')
+src.raw_to_bronze(input_dir='data\\raw', output_dir='data\\bronze', pattern='*.zip')
 
 df = pd.read_csv(
     filepath_or_buffer='data\\bronze\\comparecimento_abstencao.csv',
@@ -23,5 +23,3 @@ df \
         ) \
     .reset_index() \
     .assign(perc_abs = lambda x: x['total_abs'] / x['total_com'])
-
-df
