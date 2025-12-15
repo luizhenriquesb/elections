@@ -1,0 +1,50 @@
+meu-projeto-dados/
+│
+├── config/                  # Configurações globais (YAML, JSON)
+│   ├── etl_rules.yml        # Regras de limpeza (Regex, De-Para)
+│   └── model_config.yml     # Hiperparâmetros dos modelos de ML
+│
+├── dags/                    # [ENGENHARIA] DAGs do Airflow
+│   ├── ingestion_dag.py
+│   └── training_dag.py      # DAG que chama o script de treino do modelo
+│
+├── data/                    # [DADOS] Ignorado pelo Git
+│   ├── raw/                 # Arquivos originais (CSV, Excel)
+│   ├── processed/           # Arquivos limpos ou Parquet intermediários
+│   ├── warehouse.duckdb     # O "Banco de Dados" principal
+│   ├── models/              # Artefatos ML (.pkl, .joblib, .onnx)
+│   └── export/              # Arquivos finais para o Power BI
+│
+├── dbt_project/             # [ENGENHARIA] Transformações SQL
+│   ├── models/
+│   │   ├── staging/         # Limpeza básica
+│   │   └── marts/           # Tabelas prontas para Analistas e Cientistas
+│   └── dbt_project.yml
+│
+├── docker/                  # [INFRA] Configuração de Containers
+│   └── Dockerfile           # Imagem unificada (Airflow + ML libs)
+│
+├── notebooks/               # [ANÁLISE & CIÊNCIA] Rascunhos e Experimentos
+│   ├── 1_eda/               # Análise Exploratória dos dados do DuckDB
+│   ├── 2_experiments/       # Testes de modelos (Scikit-Learn/XGBoost)
+│   └── 3_reports/           # Análises Ad-hoc para responder perguntas
+│
+├── src/                     # [CÓDIGO FONTE] Bibliotecas Python do projeto
+│   ├── __init__.py          # Torna a pasta importável
+│   ├── common/              # Utilitários compartilhados
+│   │   └── db_conn.py       # Função única para conectar no DuckDB
+│   ├── etl/                 # Scripts de Engenharia
+│   │   ├── extractors.py    # dlt pipelines
+│   │   └── cleaners.py      # Ibis logic
+│   └── ml/                  # Scripts de Data Science (Produtivos)
+│       ├── features.py      # Feature Engineering
+│       ├── train.py         # Script de treino limpo (chamado pela DAG)
+│       └── predict.py       # Script de inferência
+│
+├── tests/                   # Testes unitários (pytest)
+│
+├── .env                     # Variáveis de ambiente (Senhas, Caminhos)
+├── .gitignore               # Ignora pasta data/ e arquivos temporários
+├── docker-compose.yml       # Orquestração dos serviços
+├── Makefile                 # Atalhos (ex: make up, make test)
+└── requirements.txt         # Todas as libs (airflow, scikit-learn, ibis...)
