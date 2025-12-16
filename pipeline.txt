@@ -1,0 +1,34 @@
+2025-12-15 17:41 | INFO |  STEP: EXTRACT RAW FILES TO STAGING
+
+2025-12-15 17:41 | INFO | 
+
+ - Processing file : 0/4
+ - Source          : tse
+ - Year            : 2020
+ - File            : comparecimento_abstencao.csv
+ - Output          : data/staging\tse\2020\comparecimento_abstencao.csv
+ - Status          : Done!
+2025-12-15 17:41 | INFO | 
+
+ - Processing file : 1/4
+ - Source          : tse
+ - Year            : 2020
+ - File            : votacao_candidato.csv
+ - Output          : data/staging\tse\2020\votacao_candidato.csv
+ - Status          : Done!
+2025-12-15 17:41 | INFO | 
+
+ - Processing file : 2/4
+ - Source          : tse
+ - Year            : 2024
+ - File            : comparecimento_abstencao.csv
+ - Output          : data/staging\tse\2024\comparecimento_abstencao.csv
+ - Status          : Done!
+2025-12-15 17:41 | INFO | 
+
+ - Processing file : 3/4
+ - Source          : tse
+ - Year            : 2024
+ - File            : votacao_candidato.csv
+ - Output          : data/staging\tse\2024\votacao_candidato.csv
+ - Status          : Done!
