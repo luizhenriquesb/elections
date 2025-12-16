@@ -1,7 +1,4 @@
-apache-airflow
-dlt
 ibis-framework[duckdb]
-dbt-duckdb
 duckdb
 pandas
 pyarrow
