@@ -3,7 +3,7 @@ This project aims to analyze electoral data from the [TSE (Superior Electoral Co
 elections/
   ├── data/ 
   │   ├── raw/
-  │   ├── stage/
+  │   ├── staging/
   │   ├── marts/
   │   └── lakehouse.duckdb/
   │
