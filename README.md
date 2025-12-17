@@ -1,5 +1,5 @@
 This project aims to analyze electoral data from the [TSE (Superior Electoral Court)](https://www.tse.jus.br/). The basics structure is as follows:
-
+```
 elections/
   ├── data/ 
   │   ├── raw/
@@ -22,3 +22,4 @@ elections/
   ├── .venv
   ├── .gitignore
   └── requirements.txt 
+```
