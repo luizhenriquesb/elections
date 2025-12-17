@@ -8,9 +8,9 @@ elections/
   │   └── lakehouse.duckdb/
   │
   ├── pipeline/
-  │   ├── extract/
-  │   ├── load/
-  │   └── transform/
+  │   ├── extract.py
+  │   ├── load.py
+  │   └── transform.py
   │
   ├── src/
   │   ├── __init__.py
