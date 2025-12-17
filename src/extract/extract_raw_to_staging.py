@@ -72,7 +72,3 @@ def extract_raw_to_staging(input_dir: str, output_dir: str, pattern: str = '*.zi
         if i+1 == total_files:
             logging.info("All files are processed!")
 
-# test
-extract_raw_to_staging(input_dir='data\\raw', output_dir='data\\staging\\')
-
-
