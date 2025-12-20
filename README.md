@@ -3,9 +3,14 @@ This project aims to analyze electoral data from the [TSE (Superior Electoral Co
 elections/
   ├── data/ 
   │   ├── raw/
-  │   ├── staging/
-  │   ├── marts/
+  │   ├── landing/
   │   └── lakehouse.duckdb/
+  |
+  ├── dashboard/
+  |   ├── app.py
+  |   ├── requirements.txt
+  |   ├── sharep.py
+  │   └── style.css
   │
   ├── pipeline/
   │   ├── extract.py
